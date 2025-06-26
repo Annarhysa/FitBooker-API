@@ -56,7 +56,7 @@ This project successfully implements a comprehensive Fitness Studio Booking API 
 ## 📁 Project Structure
 
 ```
-Omnify/
+FitBooker-API/
 ├── app/
 │   ├── __init__.py          # Package initialization
 │   ├── main.py              # FastAPI application
