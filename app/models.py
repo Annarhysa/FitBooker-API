@@ -20,7 +20,14 @@ class FitnessClass(BaseModel):
     @validator('date_time')
     def validate_future_date(cls, v):
         """Ensure class is in the future."""
-        if v < datetime.now(pytz.timezone('Asia/Kolkata')):
+        ist_tz = pytz.timezone('Asia/Kolkata')
+        now = datetime.now(ist_tz)
+        
+        # If datetime is naive, assume it's in IST
+        if v.tzinfo is None:
+            v = ist_tz.localize(v)
+        
+        if v < now:
             raise ValueError('Class date must be in the future')
         return v
 

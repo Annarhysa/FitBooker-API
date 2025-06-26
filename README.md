@@ -27,7 +27,6 @@ A comprehensive booking API for a fictional fitness studio built with FastAPI, f
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd Omnify
    ```
 
 2. **Create virtual environment**
@@ -46,7 +45,7 @@ A comprehensive booking API for a fictional fitness studio built with FastAPI, f
 
 4. **Run the application**
    ```bash
-   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+   python run.py
    ```
 
 5. **Access the API**
@@ -58,6 +57,10 @@ A comprehensive booking API for a fictional fitness studio built with FastAPI, f
 
 ```bash
 pytest tests/ -v
+```
+
+```bash
+python test_api.py
 ```
 
 ## 📋 API Endpoints
@@ -153,7 +156,7 @@ curl -X GET "http://localhost:8000/bookings?email=john@example.com" \
 ## 🗂️ Project Structure
 
 ```
-Omnify/
+FitBooker-API
 ├── app/
 │   ├── __init__.py
 │   ├── main.py              # FastAPI application
